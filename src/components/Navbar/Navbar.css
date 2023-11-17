@@ -1,0 +1,113 @@
+/* navbar */
+.nav {
+  height: 80px;
+  width: calc(100vw - 60px);
+  background-color: rgba(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 30px;
+  align-items: center;
+  font-size: 1.2rem;
+  color: white;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+
+/* bouton permettant de montrer le contenu de la navbar lorsqu'elle est en affichage responsif */
+.burger{
+  display: none;
+  cursor: pointer;
+}
+
+/* barres latérales contenues dans le bouton burger */
+.bar
+{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.5s ease;
+  background-color: white;
+}
+
+/* étoiles du logo */
+.nav .stars {
+  color: #f2cd5c;
+  filter: drop-shadow(0 0 2.5px rgb(242, 205, 92));
+}
+
+/* texte du logo */
+.nav .logo {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  font-weight: 900;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* section qui contient les redirections principales, bouton connexion, bouton profil */
+.links,
+.conn,
+.profil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  height: 100%;
+}
+
+/* redirections */
+.links a,
+.conn a,
+.profil a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* redirection (survol) */
+.nav a:hover {
+  color: #f2cd5c;
+}
+
+/* Adaptations pour une largeur <= 1000px */
+@media (max-width:1000px){
+  .burger{
+    display: block;
+  }
+
+  .nav-container
+  {
+      width: 100%;
+  }
+
+  nav{
+      position: sticky;
+      z-index: 1;
+  }
+
+  .links{
+      position: absolute;
+      left: -100%;
+      flex-direction: column;
+      background-color: #000000;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      z-index: 1;
+      top: 80px;
+      height: auto;
+      align-items: flex-start;
+      gap: 0px;
+  }
+
+  .links a {
+      margin: 20px;
+  }
+
+  .links.active{
+      left: 0;
+  }
+}

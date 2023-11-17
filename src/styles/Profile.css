@@ -1,0 +1,237 @@
+html
+{
+  height: 100%;
+}
+
+body
+{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height:100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* conteneur principal de la page */
+.main-container
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #FFFCF8;
+  overflow-y: scroll;
+}
+
+/* section qui contient les formulaires d'informations perso (infos et adresse) */
+.user-info-container
+{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* section de changement de mot de passe */
+.password-container
+{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* div cards pour les infos et l'adresse */
+#user-info-card, #adress-card
+{
+  height: 700px;
+  width: 50%;
+}
+
+/* div card pour le changement de mot de passe */
+#password-card
+{
+  height: 300px;
+  width: 100%;
+}
+
+/* div card */
+.user-info-card
+{
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  min-width: 300px;
+}
+
+/* titre de la div card */
+.card-title
+{
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #AA9D8E; 
+}
+
+/* contenu de la div card */
+.card-content
+{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* élément de la du contenu (un texte + un input) */
+.card-content-elem
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+}
+
+/* texte compris dans un élément*/
+.card-content-elem-label
+{
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/* input compris dans un élément*/
+.card-content-elem-input
+{
+  font-size: 14px;
+  height: 10px;
+  border: none;
+  border-bottom: 3px solid black;
+  background-color: #eeeeee;
+}
+
+/* formulaire de la div card */
+.card-form
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+}
+
+/* formulaire de la div card et element du contenu  */
+.card-form .card-content-elem
+{
+  width: 48%;
+}
+
+/* texte compris dans un élément*/
+.card-form .card-content-elem-label
+{
+  text-align: center;
+}
+
+/* input compris dans un élément*/
+.card-form .card-content-elem-input
+{
+  text-align: center;
+}
+
+/* bouton de validation */
+.btn-change-info
+{
+  color: #24190d;
+  border: 2px solid #24190d;
+  background-color: transparent;
+  width: 90%;
+  height: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* bouton de validation (survol) */
+.btn-change-info:hover
+{
+  color: white;
+  background-color: #24190d;
+}
+
+/* Adaptations pour une largeur <= 1000px */
+@media (max-width: 1000px)
+{
+  .main-container
+  {
+    overflow-y: unset;
+  }
+
+  .user-info-container
+  {
+    flex-direction: column;
+  }
+
+  #user-info-card
+  {
+    width: 90%;
+  }
+
+  #adress-card
+  {
+    width: 90%;
+  }
+
+  #password-card
+  {
+    width: 90%;
+  }
+}
+
+/* Adaptations pour une largeur <= 600px */
+@media (max-width: 600px)
+{
+  .card-form
+  {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card-form .card-content-elem
+  {
+    width: 100%;
+  }
+
+  .card-form .card-content-elem-label
+  {
+    text-align: left;
+  }
+
+  .card-form .card-content-elem-input
+  {
+    text-align: left;
+  }
+
+  #password-card
+  {
+    height: 350px;
+  }
+}

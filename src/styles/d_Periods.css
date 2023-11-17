@@ -1,0 +1,416 @@
+html
+{
+    overflow-x: hidden;
+}
+
+/* Container principal */
+.main-container-period
+{
+    position: relative;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+    height: 300px;
+}
+
+.employee-management{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Container pour la partie créneau */
+.period-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    padding: 50px;
+    gap: 20px;
+}
+
+/* Container pour la partie emploi du temps */
+.schedule-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+/* div card pour le tableau des employés */
+.employee-card
+{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    background-color: white;
+    box-shadow: var(--container-shadow);
+}
+
+/* sous-div des deux div cards contenant le nom de la div card */
+.div-card-name
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #121212;
+    color: white;
+    height: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+
+/* sous-div de employee-card contenant le tableau d'employés */
+.div-employee-array
+{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+/* tableau des employés du service */
+.employee-array
+{
+    width: 100%;
+    height: auto;
+}
+
+/* header du tableau */
+.employee-array th
+{
+    font-size: 1.2rem;
+    height: 50px;
+    padding: 10px;
+    text-align: left;
+    font-weight: bolder;
+    vertical-align: middle;
+}
+
+/* ligne du tableau */
+.employee-array tr
+{
+    height: 50px;
+    vertical-align: middle;
+}
+
+/* ligne pair du tableau */
+.employee-array tr:nth-child(even) 
+{
+    background: #eee
+}
+
+/* ligne impair du tableau */
+.employee-array tr:nth-child(odd) 
+{
+    background: white
+}
+
+/* cellule du tableau */
+.employee-array td
+{
+    height: 50px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+/* boutons du formulaire */
+.btn-period
+{
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* bouton pour ouvrir le modal */
+#open-modal
+{
+    color: white;
+    background-color: #121212;
+    width: 100%;
+    height: 50px;
+}
+
+/* bouton pour ouvrir le modal (hover)*/
+#open-modal:hover{
+    color: #f2cd5c;
+}
+
+/* fond flou lors de l'ouverture du modal */
+#background
+{
+    display: none;
+}
+
+/* fond flou lors de l'ouverture du modal */
+.background
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* modal de créneau */
+#period-modal
+{
+    display: flex;
+    width: 50%;
+    height: 400px;
+}
+
+/* modal de réunion */
+#meeting-modal
+{
+    display: none;
+    width: 50%;
+    height: 750px;
+}
+
+/* modal */
+.period-modal
+{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* navbar du modal */
+.period-modal-navbar
+{
+    background-color: #121212;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    gap: 50px;
+    font-size: 1.2rem;
+}
+
+/* bouton de la navbar du modal */
+.modal-navbar-button:hover
+{
+    cursor: pointer;
+    color: #f2cd5c;
+    transition: all 0.3s;
+}
+
+/* boutons de la navbar du modal */
+#period, #meeting
+{
+    color: #f2cd5c;
+}
+
+/* contenu du modal */
+.period-modal-content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+/* formulaire du modal */
+.period-form
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* élément du formulaire du modal */
+.form-elem
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    height: 100%;
+}
+
+/* input du formulaire du modal */
+.form-input
+{
+    width: 90%;
+    height: 50px;
+    border: none;
+    background-color: #eee;
+    border-bottom: 3px solid #121212;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    outline-style: none;
+}
+
+/* barre de boutons du modal */
+.period-modal-buttonbar
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 100%;
+    gap: 50px;
+}
+
+/* bouton cancel de la barre de boutons */
+#cancel
+{
+    color: #eb1c05;
+    border: 2px solid #eb1c05;
+    width: 150px;
+    height: 50px;
+}
+
+/* bouton cancel de la barre de boutons (hover)*/
+#cancel:hover{
+    background-color: #eb1c05;
+    color: white;
+}
+
+/* bouton ajouter de la barre de boutons */
+#add
+{
+    color: #5bb502;
+    border: 2px solid #5bb502;
+    width: 150px;
+    height: 50px;
+}
+
+/* bouton ajouter de la barre de boutons (hover) */
+#add:hover{
+    background-color: #5bb502;
+    color: white;
+}
+
+/* zone d'affichage des créneaux de réunion */
+.findings
+{
+    height: 300px;
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* div card d'un créneau de réunion */
+.finding-card
+{
+    padding: 20px;
+    width: 75%;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* bouton de recherche des meilleurs créneaux de réunion */
+.find
+{
+    color: black;
+    border: 2px solid black;
+    background-color: transparent;
+    width: 150px;
+    height: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* bouton de recherche des meilleurs créneaux de réunion (hover) */
+.find:hover{
+    color: white;
+    background-color: black;
+}
+
+/* bouton d'ajout de créneaux de réunion */
+.finding-add
+{
+    color: white;
+    background-color: #121212;
+    width: 150px;
+    height: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* bouton d'ajout de créneaux de réunion (hover) */
+.finding-add:hover{
+    color: #f2cd5c;
+}
+
+/* message par défaut lorsque la liste de créneaux de réunion est vide */
+.findings-warning
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* changement pour une taille d'écran de 1400px max */
+@media (max-width: 1400px)
+{
+    .finding-card
+    {
+        flex-direction: column;
+    }
+}
+
+/* changements pour une taille d'écran de 1100px max */
+@media (max-width: 1100px)
+{
+    .period-modal-buttonbar, .period-modal-navbar
+    {
+        flex-direction: column;
+        gap: 5px;
+        padding: 5px;
+    }
+
+    #cancel, #add, .find
+    {
+        width: 90%;
+    }
+}

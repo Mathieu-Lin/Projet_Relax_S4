@@ -1,0 +1,260 @@
+.corps{
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6e6e6;
+    padding: 20px;
+    gap: 20px;
+    height: 300px;
+}
+
+.ticket-container > h4{
+    position: absolute;
+    top: 50px;
+    left: 50%;    
+    font-size: 1.5rem;
+    font-weight: bold;
+    transform: translate(0,-50%);
+}
+
+.container{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.ticket-nav{
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #121212;
+    color: white;
+    height: 10px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 50px;
+}
+.ticket-nav li{
+    padding: 0 15px;
+    width: calc(100% / 3 - 30px);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+.ticket-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+.ticket-list{
+    width: 100%;
+    height: calc(90% - 30px);
+    overflow: auto;
+    border-radius: 15px;
+    padding-top: 5px;
+}
+.ticket-block{
+    position: relative;
+    margin: 20px 15px;
+    padding: 10px 15px;
+    display: inline-table;
+    width: calc(25% - 65px);
+    height: calc(50% - 60px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.ticket-block > *:not(:first-child,:nth-child(2),:nth-child(3),:nth-child(8),:last-child){
+    white-space:normal;
+    width:100%;
+    font-size: normal;
+    padding: 15px 0;
+}
+.ticket-block > h4:nth-child(4){
+    width: calc(100% - 90px);
+    font-weight: bold;
+}
+.ticket-block > h4:nth-child(2), .ticket-block > p:nth-child(3){
+    font-size: medium;
+}
+.ticket-block > h4:nth-child(2){
+    font-weight: bolder;
+}
+.bas_ticket{
+    border: none;
+    border-top: 2.5px dashed grey;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    height: calc(40px + 2em);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.status{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.Completed{
+    color: green;
+}
+
+.InProgress{
+    color: blue;
+}
+
+.Pending{
+    color: orange;
+}
+
+.Canceled{
+    color: red;
+}
+
+.scotch{
+    background: rgba(240, 240, 216, 0.5);
+    box-shadow: 0 1px 3px rgba(0,0,0,.4);
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    width: calc(100% - 60px);
+    height: 35px;
+    left: 30px;
+  }
+
+
+
+.ticket-form{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.form-container{
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, 75px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+}
+.add-form,
+.update-form{
+    width: 100%;
+    height: 100%;
+}
+form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.title{
+    border-radius: 0 15px 15px 0;
+    padding: 10px;
+    margin: 5px 0;
+    width: fit-content;
+    font-size: 1.1rem;
+    background-color: #e6e6e6;
+    color: black;
+}
+
+.row{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+label{
+    font-size: 1rem;
+    padding: 10px;
+    width: 25%;
+    text-align: left;
+}
+textarea{
+    padding: 10px 10px;
+    text-align: left !important;
+    width: calc(75% - 20px) !important;
+}
+input, select, textarea{
+    border: none;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    background-color: #eee;
+    border-bottom: 3px solid #121212;
+    height: 40px;
+    width: 75%;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    outline-style: none;
+}
+
+.button{
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+
+
+
+.active{
+    display: flex;
+}
+.no-active{
+    display: none;
+}
+
+.update-icon,
+.annule-icon{
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.update-icon {
+    right: 60px !important;
+  }
+.update-icon *,
+.annule-icon *{
+    color: white;
+    width: 1.25rem;
+    height: 1.25rem;
+}

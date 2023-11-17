@@ -1,0 +1,283 @@
+.connexion-container,
+.inscription-container {
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  background-color: white;
+  z-index: 5;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, 30%);
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.inscription-container {
+  height: 65vh !important;
+}
+.connexion-container h1,
+.inscription-container h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #523819;
+}
+
+.connexion-container form,
+.inscription-container form {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 75%;
+  height: 75%;
+  margin: auto;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.row > input:first-child,
+.row > select:first-child {
+  width: 30%;
+}
+.row > input:last-child {
+  width: 60%;
+}
+input,
+select {
+  background: #ffffff;
+  border: 2px solid #000000;
+  font-size: 1.25rem;
+  padding: 15px 7.5px;
+}
+
+.supl {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.supl *,
+.no-account,
+.have-account {
+  font-size: 1.25rem;
+  color: #523819;
+  text-decoration: none;
+}
+.supl *:hover,
+.no-account:hover,
+.have-account:hover {
+  color: #24190d;
+  cursor: pointer;
+}
+input:focus {
+  color: #523819;
+}
+#tjrConn:checked {
+  accent-color: #24190d;
+}
+
+.button {
+  padding: 15px 40px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #523819;
+  border: 4px solid #24190d;
+
+  transition: all 0.4s ease;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #24190d;
+}
+
+.inscription-container h4 {
+  padding: 20px 10px;
+  background-color: #24190d;
+  color: white;
+}
+
+.partie {
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.navigation-ins {
+  text-align: center;
+  width: fit-content;
+}
+.dotIns {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 5px;
+  display: inline-block;
+  transition: all 0.4s ease;
+}
+.navigation-ins > .dotIns {
+  background-color: #775731;
+}
+.navigation-ins > .active,
+.dotIns:hover {
+  width: 30px;
+  background-color: #24190d;
+  box-shadow: 0 0 2.5px #24190d;
+}
+
+.active_conn {
+  display: flex !important;
+}
+
+.corps {
+  width: 100vw;
+  height: fit-content;
+}
+.corps > h1 {
+  margin-top: 50px !important;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 90px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #523819;
+  width: 75%;
+  margin: auto;
+}
+.paraInfo {
+  width: 65%;
+  height: fit-content;
+  font-weight: 300;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #000000;
+  margin: 30px auto;
+}
+.photoBlock {
+  position: relative;
+  width: 75vw;
+  height: 50vh;
+  padding: 5px;
+  background-color: #523819;
+  margin: 15px auto;
+}
+.slider_mini {
+  width: 75vw;
+  height: 50vh;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.slider_mini img {
+  object-fit: cover;
+  height: 50vh;
+  width: 75vw;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  transition: all 0.5s ease-in-out;
+}
+
+.slider_mini img:first-child {
+  z-index: 1;
+}
+
+.slider_mini img:nth-child(2) {
+  z-index: 0;
+}
+.slider_mini img:nth-child(3) {
+  z-index: 0;
+}
+
+.navigation-button_mini {
+  text-align: center;
+  width: fit-content;
+  position: absolute;
+  bottom: 25px;
+  left: 40px;
+}
+
+/****************************************************** */
+.dropdown {
+  position: relative;
+}
+.dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 16px;
+  width: fit-content;
+  height: 72px;
+  color: #f9f9f9;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+.dropdown > button {
+  position: relative;
+  z-index: 5;
+  transition: 0.3s;
+}
+
+.menu {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  height: fit-content;
+  opacity: 0;
+  transform-origin: 100% 0%;
+  scale: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.75);
+  transition: 0.4s;
+}
+
+.dropdown.open .menu {
+  scale: 1;
+  right: 0;
+  top: 80px;
+  opacity: 1;
+  visibility: visible;
+  padding-top: 5px;
+}
+
+.menu button {
+  border: 0;
+  width: 100%;
+  height: 55px;
+  border-radius: 0;
+}
+
+.menu button:hover {
+  color: #f2cd5c;
+}
+
+.chevron {
+  margin-left: auto;
+  transition: 0.4s;
+}
+.dropdown.open .chevron {
+  rotate: -180deg;
+}
+.dropdown.open > button,
+.dropdown:hover > button {
+  color: #f2cd5c;
+}

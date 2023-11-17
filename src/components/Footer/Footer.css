@@ -1,0 +1,18 @@
+/* footer */
+footer {
+  background-color: #24190d;
+  color: #ffffff;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Adaptations pour une largeur <= 800px */
+@media (max-width: 800px) {
+  footer {
+    height: 300px;
+    flex-direction: column;
+  }
+}

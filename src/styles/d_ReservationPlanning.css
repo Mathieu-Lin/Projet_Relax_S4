@@ -1,0 +1,59 @@
+.reservation-container .reservation, .reservation-container .intervention{
+    position: absolute;
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reservation-container .reservation{
+    background-color: var(--reservation);
+}
+
+.reservation-container .intervention{
+    background-color: var(--intervention);
+}
+
+.intervention > * {
+    word-wrap: break-word;
+}
+
+.modal-container{
+    position: absolute;
+    background-color: var(--main-bg-color);
+    display: none;
+    flex-direction: column;
+    box-shadow: var(--container-shadow);
+    gap: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.modal-container.intervention{
+    border: 1px solid var(--intervention);
+}
+
+.modal-container.reservation{
+    border: 1px solid var(--reservation);
+}
+
+.intervention h4{
+    text-align: center;
+    background-color: var(--intervention);
+}
+
+.reservation h4{
+    text-align: center;
+    background-color: var(--reservation);
+}
+
+.modal-container h5, .modal-container h4{
+    font-weight: bold;
+}
+
+.modal-container p{
+    color: rgb(74, 74, 74);
+}

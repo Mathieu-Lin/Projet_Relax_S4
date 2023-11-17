@@ -1,0 +1,354 @@
+.reservation-container{
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6e6e6;
+    padding: 20px;
+    gap: 20px;
+    height: 300px;
+}
+.reservation-container > h4{
+    position: absolute;
+    top: 50px;
+    left: 50%;    
+    font-size: 1.5rem;
+    font-weight: bold;
+    transform: translate(0,-50%);
+}
+.container{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.room-container{
+    width: 20%;
+    height: calc(100%);
+    overflow-y: scroll;
+}
+.room-container > h6{
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #121212;
+    color: white;
+    height: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.room-container li{
+    text-decoration: none;
+    list-style: none;
+    background-color: #e6e6e6;
+    margin: 10px auto;
+    width: calc(100% - 30px);
+}
+.room-container a {
+    display: block;
+    width: calc(100% - 30px);
+    height: max-content;
+    padding: 15px 15px 15px 15px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+.room-container a:hover {
+    cursor: pointer;
+    color:white;
+    background-color: black;
+}
+.resa-container{
+    width: 70%;
+    height: 100%;
+}
+
+.room-nav{
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #121212;
+    color: white;
+    height: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 50px;
+}
+.room-nav li{
+    padding: 0 15px;
+    width: calc(100% / 3 - 30px);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+.resa{
+    width: calc(100% - 30px);
+    height: calc(100% - 5px - 75px);
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.resa form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+}
+.title{
+    border-radius: 0 15px 15px 0;
+    padding: 10px;
+    margin: 5px 0;
+    width: fit-content;
+    font-size: 1.1rem;
+    background-color: #e6e6e6;
+    color: black;
+}
+
+.row{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+label{
+    font-size: 1rem;
+    padding: 10px;
+    width: 25%;
+    text-align: left;
+}
+
+input, select{
+    border: none;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    background-color: #eee;
+    border-bottom: 3px solid #121212;
+    height: 40px;
+    width: 75%;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    outline-style: none;
+}
+
+.button{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: fit-content;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+.main-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6e6e6;
+    flex-grow: 1;
+    gap: 20px;
+}
+
+.timetable-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-rows: 0.5fr 10fr;
+    padding: 15px 0;
+}
+
+.timetable-head, .timetable-body{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr repeat(7, 1fr);
+}
+
+.timetable-footer{
+    text-align: center;
+}
+
+.timetable-body > *{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.hour-label-container {
+    display: grid;
+    grid-template-rows: repeat(24, 1fr);
+    border-left: 1px solid black;
+}
+
+.hour-label-container span:not(:first-child):not(:last-child) {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid black;
+    width: 100%;
+    font-size: small;
+}
+
+.week-day{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.day-container{
+    position: relative;
+}
+
+.working{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: grey;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resa-demands
+{
+    display: flex;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.demands-container
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reservation-card
+{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 150px;
+    width: 60%;
+    margin: 30px;
+}
+
+.reservation-card-title
+{
+    background-color: #121212;
+    color: white;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reservation-card-content
+{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reservation-card-buttonbar
+{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* bouton réservation */
+.demand-btn 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  height: 40px;
+  width: 100px;
+  font-size: 1.0rem;
+  transition: all 0.4s ease;
+}
+
+#deny-btn 
+{
+  cursor: pointer;
+  color: #eb1c05;
+  border: 2px solid #eb1c05;
+}
+
+/* bouton réservation (survol) */
+#deny-btn:hover
+{
+  cursor: pointer;
+  color:white;
+  background-color: #eb1c05;
+}
+
+#approve-btn
+{
+  cursor: pointer;
+  color: #5bb502;
+  border: 2px solid #5bb502;
+}
+
+#approve-btn:hover
+{
+  cursor: pointer;
+  color:white;
+  background-color: #5bb502;
+}
+
+h1, h2{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.day, .date{
+    font-size: small;
+}
+
+.active{
+    display: flex;
+}
+.no-active{
+    display: none;
+}

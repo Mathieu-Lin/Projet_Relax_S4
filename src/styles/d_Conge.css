@@ -1,0 +1,497 @@
+/**********************/
+/* Partie corps */
+/**********************/
+.conge-main-container
+{
+  display: flex;
+  justify-content: center;
+  gap: 0px 30px ;
+  height: 88vh;
+  padding: 20px;
+  background-color: var(--main-bg-color);
+}
+
+/************************/
+/* Container (liste et bouton) */
+/***********************/
+.conge-container
+{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-color: var(--container-bg-color);
+  box-shadow: var(--container-shadow);
+}
+/****** Title containers ******/
+.conge-title-container
+{
+  display:flex;
+  background-color: var(--dark-bg-color);
+  font-size : 1.5rem;
+  font-weight: bold;
+  color:white;
+  height : 15px;
+  width : 100%;
+  padding : 30px 0px;
+  align-items: center;
+  justify-content: center;
+}
+/****** navbar containers *****/
+
+.conge-navbar-container
+{
+  width:100%;
+  height:5vh;
+  display: flex;
+  justify-content: space-between;
+  font-size : 2vh;
+  background-color: grey;
+  color: #fff;
+}
+
+.conge-navbar-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.conge-navbar-container li {
+  height: 2vh;
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  border: none;
+  width : 8vw;
+}
+
+.conge-navbar-container li:hover {
+  background-color: black;
+  height: 2.1vh;
+}
+
+.conge-navbar-container ul ul {
+  position: absolute;
+  display: none;
+  background-color: grey;
+  color: white;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.conge-navbar-container li:hover > ul {
+  display : block;
+  position : absolute;
+  height : auto;
+}
+
+.conge-navbar-container ul a {
+  text-decoration: none;
+  color: white;
+  height: 3vh;
+}
+
+.conge-navbar-container ul ul a {
+  height : auto;
+}
+
+.conge-navbar-container-all:hover
+{
+  color : var(--yellow);
+  cursor:pointer;
+}
+
+.conge-navbar-container-approved:hover
+{
+  color : var(--yellow);
+  cursor:pointer;
+}
+
+.conge-navbar-container-pending:hover
+{
+  color : var(--yellow);
+  cursor:pointer;
+}
+
+.conge-navbar-container-denied:hover
+{
+  color : var(--yellow);
+  cursor:pointer;
+}
+
+/****** Liste containers ******/
+.conge-list-container
+{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  width : 100%;
+  height : 100%;
+}
+/* Intérieur de la liste */
+.conge-list-elt-container
+{
+  display: flex;
+  flex-direction:row;
+  cursor: pointer;
+  background-color: #eee;
+  border-bottom: 3px solid black;
+  height: 15vh;
+  align-items: center;
+}
+
+.conge-list-elt-container:hover
+{
+  background-color: #969696;
+}
+
+/********** Les ronds **********/
+.conge-list-elt-round-approved
+{
+  width: 25px; 
+  height: 25px; 
+  border-radius: 50%; 
+  background-color: var(--validation);
+  margin : 1vw 1vh 1vw 1vh;
+}
+
+.conge-list-elt-round-pending
+{
+  width: 25px; 
+  height: 25px; 
+  border-radius: 50%; 
+  background-color: var(--yellow);
+  margin : 1vw 1vh 1vw 1vh;
+}
+
+.conge-list-elt-round-denied
+{
+  width: 25px; 
+  height: 25px; 
+  border-radius: 50%; 
+  background-color: var(--danger);
+  margin : 1vw 1vh 1vw 1vh;
+}
+
+/* Bouton ajouter congé */
+
+.conge-add
+{
+  display:flex;
+  background-color: var(--dark-bg-color);
+  font-size : 1rem;
+  font-weight: bold;
+  color:var(--container-bg-color);
+  height : 10px;
+  width : 100%;
+  padding : 30px 0px;
+  align-items: center;
+  justify-content: center;
+  cursor:pointer;
+  position:relative;
+}
+
+
+.conge-add:hover
+{
+  color: var(--yellow);
+}
+
+
+/****************************/
+/******** Formulaire de congé*/
+/****************************/
+.conge-add-background
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conge-add-pack
+{
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width : 35vw;
+  height : 50vh;
+}
+
+/* saisie de datetime pour début car exception en raison de sa taille*/
+.conge-add-datetime
+{
+  border: none;
+  background-color: #eee;
+  border-bottom: 3px solid #121212;
+  height: 5vh;
+  width: 18.4vw;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  outline-style: none;
+  margin-top : 1vh;
+  margin-left : 1vw;
+}
+
+/****************************/
+/* Les détails du congé partie card*/
+/***************************/
+.conge-card
+{
+  flex: 2;
+  height: 100%;
+  background-color: var(--container-bg-color);
+  box-shadow: var(--container-shadow);
+}
+
+.conge-title-card
+{
+  display:flex;
+  background-color: var(--dark-bg-color);
+  font-size : 1.5rem;
+  font-weight: bold;
+  color:white;
+  height : 15px;
+  width : 100%;
+  padding : 30px 0px;
+  justify-content: center;
+}
+
+/* Pack d'écritutre*/
+.conge-information-card-title
+{
+  display:flex;
+  font-size: 20px;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-top : 1vh;
+  align-items:center;
+  justify-content: center;
+  margin-bottom : 1vh;
+}
+
+.conge-information-card-writting-pack
+{
+  display : flex;
+  margin-top:0.5vh;
+  margin-left :3vw;
+  align-items: center;
+}
+.conge-information-card-writting-title
+{
+  display : flex;
+  color: blue;
+  text-decoration: underline;
+  align-items: center;
+  margin-top:1px;
+  margin-left: 0.5vw;
+}
+
+.conge-information-card-writting-title-modif
+{
+  display : flex;
+  color: var(--yellow);
+  text-decoration: underline;
+  align-items: center;
+  margin-top:1px;
+  margin-left: 0.5vw;
+}
+
+.conge-information-card-writting
+{
+  margin-top:1px;
+  margin-left: 0.5vw;
+}
+
+.conge-information-card-writting-approved
+{
+  display : flex;
+  margin-top : 1vh;
+  color:var(--validation);
+  margin-bottom : 1vh;
+  margin-left : 1vw;
+  align-items:center;
+  justify-content: center;
+}
+
+.conge-information-card-writting-denied
+{
+  display : flex;
+  margin-top : 1vh;
+  color:var(--danger);
+  margin-bottom : 1vh;
+  margin-left : 1vw;
+  align-items:center;
+  justify-content: center;
+}
+
+.conge-information-card-writting-pending
+{
+  display : flex;
+  margin-top : 1vh;
+  color:var(--yellow);
+  margin-bottom : 1vh;
+  margin-left : 1vw;
+  align-items:center;
+  justify-content: center;
+}
+
+/* Pack de saisie */
+
+/* saisie de datetime */
+.conge-information-card-datetime
+{
+  border: none;
+  background-color: #eee;
+  border-bottom: 3px solid #121212;
+  height: 5vh;
+  width: 20vw;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  outline-style: none;
+  margin-top : 1vh;
+  margin-left : 1vw;
+}
+
+/*saisie du texte */
+
+.conge-information-card-textarea
+{
+    border: none;
+    background-color: #eee;
+    border-bottom: 3px solid #121212;
+    height: 7vh;
+    width: 30vw;
+    color: black;
+    font-weight: bold;
+    outline-style: none;
+    margin-left : 1.65vw;
+    margin-right : 1.65vw;
+    margin-top : 1vh;
+}
+
+/* Les boutons */
+.conge-information-card-button-pack
+{
+  display:flex;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top : 1vh;
+  align-items:center;
+  justify-content: center;
+  margin-bottom : 1vh;
+}
+.conge-information-card-button-approved
+{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s;
+  background-color: transparent;
+  color: var(--validation);
+  border: 1px solid var(--validation);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  width: 15vw;
+  margin-top : 1vh;
+  margin-left : 1.65vw;
+  margin-right : 1.65vw;
+  margin-bottom:2vh;
+}
+.conge-information-card-button-approved:hover
+{
+  background-color: var(--validation);
+  color: white;
+}
+
+.conge-information-card-button-modif
+{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s;
+  background-color: transparent;
+  color: var(--yellow);
+  border: 1px solid var(--yellow);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  width: 15vw;
+  margin-top : 1vh;
+  margin-left : 1.65vw;
+  margin-right : 1.65vw;
+  margin-bottom:2vh;
+}
+
+.conge-information-card-button-modif:hover
+{
+  background-color: var(--yellow);
+  color: white;
+}
+.conge-information-card-button-denied
+{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s;
+  background-color: transparent;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  width: 15vw;
+  margin-top : 1vh;
+  margin-left : 1.65vw;
+  margin-right : 1.65vw;
+  margin-bottom:2vh;
+}
+
+.conge-information-card-button-denied:hover
+{
+  background-color: var(--danger);
+  color: white;
+}
+/** Partie identité **/
+.conge-identity-card
+{
+  border: none;
+  background-color: white;
+  border-bottom: 3px solid #121212;
+  height: 30%;
+  width: 100%;
+  color: black;
+  font-weight: bold;
+  outline-style: none;
+  justify-content: center;
+}
+
+/** Partie information congé **/
+.conge-information-card
+{
+  border: none;
+  background-color: white;
+  border-bottom: 3px solid #121212;
+  width: 100%;
+  height : 58%;
+  overflow-y: scroll;
+  color: black;
+  font-weight: bold;
+  outline-style: none;
+}
+

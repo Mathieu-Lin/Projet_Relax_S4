@@ -1,0 +1,245 @@
+.main-container{
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6e6e6;
+    padding: 20px;
+    gap: 20px;
+    height: 300px;
+}
+
+.timetable-container {
+    position: relative;
+    flex: 3;
+    width: 80%;
+    height: 80%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: scroll;
+    display: grid;
+    grid-template-rows: 0.5fr 10fr;
+    padding: 20px;
+    box-shadow: var(--container-shadow);
+}
+
+.timetable-head, .timetable-body{
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.5fr repeat(7, 2fr);
+}
+
+.timetable-footer{
+    text-align: center;
+}
+
+.timetable-body > *{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.hour-label-container {
+    display: grid;
+    grid-template-rows: repeat(24, 1fr);
+    border-left: 1px solid black;
+}
+
+.hour-label-container span:not(:first-child):not(:last-child) {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid black;
+    width: 100%;
+}
+
+.week-day{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.day-container{
+    position: relative;
+}
+
+.working, .holiday, .meeting, .intervention{
+    position: absolute;
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intervention > * {
+    word-wrap: break-word;
+}
+
+.working{
+    background-color: rgba(0, 255, 0, 0.175);
+}
+
+.meeting{
+    background-color: rgb(128, 0, 128);
+}
+
+.holiday{
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255, 0.4),
+        rgba(255,255,255, 0.4) 10px,
+        rgba(160,160,160, 0.4) 10px,
+        rgba(160,160,160, 0.4) 20px
+    );
+}
+
+.intervention{
+    background-color: rgb(29, 157, 255);
+}
+
+h1, h2{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* div card pour le tableau des employés */
+.employee-card
+{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* sous-div des deux div cards contenant le nom de la div card */
+.div-card-name
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #121212;
+    color: white;
+    height: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+
+/* sous-div de employee-card contenant le tableau d'employés */
+.div-employee-array
+{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+/* tableau des employés du service */
+.employee-array
+{
+    width: 100%;
+    height: auto;
+}
+
+.initials-node{
+    position: absolute;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* header du tableau */
+.employee-array th
+{
+    font-size: 1.2rem;
+    height: 50px;
+    padding: 10px;
+    text-align: left;
+    font-weight: bolder;
+    vertical-align: middle;
+}
+
+/* ligne du tableau */
+.employee-array tr
+{
+    height: 50px;
+    vertical-align: middle;
+}
+
+/* ligne pair du tableau */
+.employee-array tr:nth-child(even) 
+{
+    background: #eee
+}
+
+/* ligne impair du tableau */
+.employee-array tr:nth-child(odd) 
+{
+    background: white
+}
+
+/* cellule du tableau */
+.employee-array td
+{
+    height: 50px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.modal-container{
+    position: absolute;
+    background-color: var(--main-bg-color);
+    display: none;
+    flex-direction: column;
+    border: 1px solid rgb(29, 157, 255);
+    box-shadow: var(--container-shadow);
+    gap: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.modal-container.intervention{
+    border: 1px solid var(--intervention);
+}
+
+.modal-container.Working{
+    border: 1px solid var(--working);
+}
+
+.modal-container.Meeting{
+    border: 1px solid var(--meeting);
+}
+
+.modal-container.Holiday{
+    border: 1px solid var(--holiday);
+}
+
+.Working h4{
+    text-align: center;
+    background-color: var(--working);
+}
+
+.Meeting h4{
+    text-align: center;
+    background-color: var(--meeting);
+}
+
+.Holiday h4{
+    text-align: center;
+    background-color: var(--holiday);
+}
+
+.Intervention h4{
+    text-align: center;
+    background-color: var(--intervention);
+}
+
+.modal-container h5, .modal-container h4{
+    font-weight: bold;
+}
+
+.modal-container p{
+    color: rgb(74, 74, 74);
+}
